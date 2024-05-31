@@ -1,0 +1,201 @@
+/* Page layout */
+
+body {
+	background-color: #EEE;
+	max-width: 60em;
+	margin: 1em auto;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+	font-family: sans-serif;
+}
+
+/* Top of page */
+
+header > p {
+	font-size: 2em;
+	font-weight: bold;
+	text-align: center;
+	margin: 0;
+}
+
+nav > ul {
+	text-align: center;
+	font-weight: bold;
+	margin: 0;
+	padding: 0;
+}
+
+nav > ul > li {
+	display: inline;
+	padding-left: 0.25em;
+	padding-right: 0.25em;
+	/* text-decoration: underline; */
+}
+
+header {
+	margin-bottom: 1em;
+	padding-bottom: 1em;
+	border-bottom: 1px solid;
+}
+
+/* Flexbox */
+
+div.flex {
+	display: flex;
+	align-items: center;
+	flex-flow: row wrap;
+}
+
+div.flex > div {
+	flex: 1 1 250px;
+}
+
+/* Images */
+
+main img {
+	display: block;
+	margin: auto;
+	max-height: 300px;
+	max-width: 100%;
+}
+
+/* "jump to" divs */
+
+div.contents {
+	width: fit-content;
+	background-color: #BBB;
+	margin: 0 1em 0 1em;
+	padding: 0.25em;
+	border-radius: 1em;
+}
+
+div.contents > ul {
+	margin: 1em;
+	padding: 0;
+}
+
+div.contents > ul > li {
+	display: inline;
+}
+
+div.contents > ul::before {
+	content: "Jump to:";
+}
+
+div.contents > ul > li:not(:last-child)::after { /* Whats that? No javascript! */
+	content: " |";
+}
+
+/* other pretty things */
+
+h1 {
+	margin: 0;
+	text-align: center;
+}
+
+h2.post-title {
+	margin-bottom: 0;
+}
+
+hr {
+	width: 50%;
+	height: 1px;
+	border: none;
+	background-color: black;
+}
+
+time {
+	display: block;
+}
+
+h1 + time {
+	text-align: center;
+	font-style: italic;
+}
+
+h2 + time {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+figcaption {
+	margin-top: 0.25em;
+	text-align: center;
+	font-style: italic;
+}
+
+code {
+	background-color: #333;
+	border-radius: 0.5em;
+	padding: 0.5em;
+	color: white;
+	display: block;
+	white-space: pre-wrap;
+	width: fit-content;
+}
+
+.inline-code {
+	background-color: #333;
+	border-radius: 0.5em;
+	color: white;
+	font-family: monospace;
+	padding: 0 0.25em;
+}
+
+ul.no-bullets {
+	list-style: none;
+}
+
+/* Footer stuff */
+
+footer {
+	margin-top: 1em;
+	border-top: 1px solid;
+}
+
+footer > p {
+	text-align: center;
+}
+
+/* Links */
+
+a {
+	color: blue;
+}
+
+a:visited {
+	color: purple;
+}
+
+a:hover {
+	text-shadow: 0px 0px 10px;
+}
+
+/* Dark theme! */
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background-color: #111;
+		color: white;
+	}
+
+	hr {
+		background-color: white;
+	}
+
+	div.contents {
+		background-color: #333;
+	}
+
+	code { 
+		border: 1px solid ivory;
+	}
+
+	a {
+		color: cornflowerblue;
+	}
+
+	a:visited {
+		color:orchid;
+	}
+}

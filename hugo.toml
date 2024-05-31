@@ -1,0 +1,34 @@
+baseURL = 'https://talthorpe.co.uk/'
+languageCode = 'en-gb'
+title = 'Talthorpe Bus Simulator'
+disableKinds = ['taxonomy', 'term']
+
+[[menus.main]]
+name = 'Home'
+pageRef = '/'
+weight = 10
+
+[[menus.main]]
+name = 'Updates'
+pageRef = '/posts'
+weight = 20
+
+[[menus.main]]
+name = 'Operators'
+pageRef = '/operators'
+weight = 30
+
+[[menus.main]]
+name = "Who's Who"
+pageRef = '/whos-who'
+weight = 40
+
+[[menus.main]]
+name = 'Game Link'
+url = 'https://www.roblox.com/games/4931283084/'
+weight = 50
+
+[[menus.main]]
+name = 'Discord'
+url = 'https://discord.gg/GFtEWXdqzm'
+weight = 60
